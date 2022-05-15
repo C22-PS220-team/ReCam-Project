@@ -25,7 +25,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintBottom_toTopOf="@id/btnKamera"
-        android:text="Ganti Gambar"/>
+        android:text="@string/ganti_gambar"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnKamera"
