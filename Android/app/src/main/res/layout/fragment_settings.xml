@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/rounded_corner_bawah"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Pengaturan"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/bahasa"
+        style="@style/ButtonGeneral"
+        android:drawableLeft="@drawable/ic_baseline_g_translate_24"
+        android:text="Ubah Bahasa"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/notifikasi"
+        style="@style/ButtonGeneral"
+        android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+        android:text="Notifikasi"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bahasa" />
+
+    <Button
+        android:id="@+id/tentang"
+        style="@style/ButtonGeneral"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        android:text="Tentang"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notifikasi" />
+
+    <Button
+        android:id="@+id/keluar"
+        style="@style/ButtonGeneral"
+        android:drawableLeft="@drawable/ic_baseline_logout_24"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        android:text="Keluar"
+        app:backgroundTint="#EF5350"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tentang" />
+</androidx.constraintlayout.widget.ConstraintLayout>
