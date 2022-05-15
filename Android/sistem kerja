@@ -1,1 +1,10 @@
-
+#alur activity
+pada alur activty aplikasi ReCam terdapat bebrapa activity :
+1. Splash screen
+splash screen ini dibuat sebagai layar awal pembuka aplikasi yang berdurasi 5 detik
+2. Login activity
+pada login activity ini terdapat email dan password, jika belum login maka akan ada tombol untuk ke register activity
+3. register activity
+pada register activity ini terdapat email, nama dan password
+4. shared preference 
+sebagai tempat penyimpanan token, terdapat hapus token, simapan dan mendapatkan token.
