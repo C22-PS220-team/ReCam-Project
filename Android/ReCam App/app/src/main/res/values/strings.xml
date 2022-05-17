@@ -5,4 +5,8 @@
     <string name="title_settings">Settings</string>
     <string name="perubahan_iklim_kian_berbahaya"><b>Perubahan iklim kian berbahaya</b>\n<i>Climate Change</i></string>
     <string name="ganti_gambar">Ganti Gambar</string>
+    <string name="ubah_bahasa">Ubah Bahasa</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="tentang">Tentang</string>
+    <string name="keluar">Keluar</string>
 </resources>

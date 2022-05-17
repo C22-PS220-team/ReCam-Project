@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_anchor="@id/nav_view"
-            app:srcCompat="@drawable/ic_baseline_camera_24" />
+            app:srcCompat="@drawable/ic_baseline_camera_24"
+            app:tint="@color/white" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <fragment
