@@ -9,4 +9,13 @@
     <string name="notifikasi">Notifikasi</string>
     <string name="tentang">Tentang</string>
     <string name="keluar">Keluar</string>
+    <string name="selamat_datang">Selamat Datang,</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="kategori">Kategori</string>
+    <string name="plastik">Plastik</string>
+    <string name="logam">Logam</string>
+    <string name="kayu">Kayu</string>
+    <string name="artikel">Artikel</string>
+    <string name="lebih_banyak">Lebih banyak</string>
 </resources>
