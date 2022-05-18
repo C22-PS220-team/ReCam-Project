@@ -26,4 +26,5 @@
     <string name="kamera">Camera</string>
     <string name="queryHint">What do you want to recycle today?</string>
     <string name="version">Version</string>
+    <string name="cardboard">Cardboard</string>
 </resources>
