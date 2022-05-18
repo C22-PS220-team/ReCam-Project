@@ -71,6 +71,9 @@ class ResultCameraActivity : AppCompatActivity() {
                 val chooser = Intent.createChooser(intent, "Choose a Picture")
                 launcherIntentGallery.launch(chooser)
             }
+            arrowBack.setOnClickListener {
+                onBackPressed()
+            }
         }
     }
 

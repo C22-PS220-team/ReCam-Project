@@ -7,9 +7,9 @@
     tools:context=".ui.settings.SettingsFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/imageView"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="?android:attr/actionBarSize"
         android:background="@drawable/rounded_corner_bawah"
         android:minHeight="?attr/actionBarSize"
         app:title="Pengaturan"
@@ -27,7 +27,7 @@
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <Button
         android:id="@+id/notifikasi"

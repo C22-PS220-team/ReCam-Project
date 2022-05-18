@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -11,22 +11,24 @@
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_navigation_camera"
-            app:destination="@id/navigation_camera" />
-        <action
             android:id="@+id/action_navigation_home_to_navigation_settings"
             app:destination="@id/navigation_settings" />
     </fragment>
-
-    <fragment
-        android:id="@+id/navigation_camera"
-        android:name="com.dhandev.recam.ui.camera.CameraFragment"
-        android:label="@string/title_camera"
-        tools:layout="@layout/fragment_camera" />
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.dhandev.recam.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.dhandev.recam.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

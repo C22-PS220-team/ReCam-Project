@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReCam</string>
+    <string name="title_dashboard">Dasbor</string>
+    <string name="title_camera">Kamera</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="ganti_gambar">Ganti Gambar</string>
+    <string name="ubah_bahasa">Ubah Bahasa</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="tentang">Tentang</string>
+    <string name="keluar">Keluar</string>
+    <string name="selamat_datang">Selamat Datang,</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="kategori">Kategori</string>
+    <string name="plastik">Plastik</string>
+    <string name="logam">Logam</string>
+    <string name="kayu">Kayu</string>
+    <string name="artikel">Artikel</string>
+    <string name="lebih_banyak">Lebih banyak</string>
+    <string name="txt_login">Masuk</string>
+    <string name="pilih_gambar">Pilih Gambar</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="galeri">Galeri</string>
+    <string name="kamera">Kamera</string>
+    <string name="queryHint">Daur Ulang Apa hari ini?</string>
+</resources>
