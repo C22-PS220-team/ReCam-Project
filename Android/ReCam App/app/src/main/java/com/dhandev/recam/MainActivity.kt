@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val locale = Locale(language)
 
         Locale.setDefault(locale)
-        config.locale = locale
+        config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 }

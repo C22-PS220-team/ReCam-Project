@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -80,7 +81,7 @@
             android:layout_marginHorizontal="20dp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:text="@string/rekomendasi"
+            android:text="@string/featured"
             android:textColor="@color/abu"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -225,7 +226,7 @@
                 android:id="@+id/paper"
                 style="@style/kategori"
                 android:background="@drawable/paper"
-                android:text="Paper"/>
+                android:text="@string/paper"/>
             <View
                 android:layout_width="5dp"
                 android:layout_height="match_parent"/>

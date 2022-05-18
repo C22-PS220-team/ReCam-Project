@@ -71,7 +71,7 @@ class SettingsFragment : Fragment() {
         val locale = Locale(Lang)
 
         Locale.setDefault(locale)
-        config.locale = locale
+        config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
 
         requireActivity().recreate()

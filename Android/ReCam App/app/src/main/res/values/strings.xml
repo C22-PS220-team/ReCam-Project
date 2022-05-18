@@ -10,7 +10,7 @@
     <string name="tentang">About</string>
     <string name="keluar">Logout</string>
     <string name="selamat_datang">Welcome,</string>
-    <string name="rekomendasi">Recomendation</string>
+    <string name="featured">Featured</string>
     <string name="lihat_semua">More</string>
     <string name="kategori">Category</string>
     <string name="plastik">Plastic</string>
@@ -24,7 +24,8 @@
     <string name="lanjut">Next</string>
     <string name="galeri">Galery</string>
     <string name="kamera">Camera</string>
-    <string name="queryHint">What do you want to recycle today?</string>
     <string name="version">Version</string>
     <string name="cardboard">Cardboard</string>
+    <string name="paper">Paper</string>
+    <string name="queryHint">Creation from plastic bottle</string>
 </resources>

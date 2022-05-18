@@ -10,7 +10,7 @@
     <string name="tentang">Tentang</string>
     <string name="keluar">Keluar</string>
     <string name="selamat_datang">Selamat Datang,</string>
-    <string name="rekomendasi">Rekomendasi</string>
+    <string name="featured">Unggulan</string>
     <string name="lihat_semua">Lihat semua</string>
     <string name="kategori">Kategori</string>
     <string name="plastik">Plastik</string>
@@ -23,6 +23,8 @@
     <string name="lanjut">Lanjut</string>
     <string name="galeri">Galeri</string>
     <string name="kamera">Kamera</string>
-    <string name="queryHint">Daur Ulang Apa hari ini?</string>
+    <string name="queryHint">Kreasi dari botol plastik</string>
     <string name="version">Versi</string>
+    <string name="cardboard">Kardus</string>
+    <string name="paper">Kertas</string>
 </resources>
