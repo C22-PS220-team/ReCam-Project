@@ -28,4 +28,12 @@
     <string name="cardboard">Cardboard</string>
     <string name="paper">Paper</string>
     <string name="queryHint">Creation from plastic bottle</string>
+    <string name="email" translatable="false">email</string>
+    <string name="password" translatable="false">password</string>
+    <string name="sign_in" translatable="false">sign in</string>
+    <string name="ask_register" translatable="false">belum punya akun?</string>
+    <string name="daftar" translatable="false">Daftar</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="name" translatable="false">name</string>
+    <string name="sign_up" translatable="false">sign_up</string>
 </resources>
