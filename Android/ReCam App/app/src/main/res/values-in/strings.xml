@@ -24,4 +24,5 @@
     <string name="galeri">Galeri</string>
     <string name="kamera">Kamera</string>
     <string name="queryHint">Daur Ulang Apa hari ini?</string>
+    <string name="version">Versi</string>
 </resources>

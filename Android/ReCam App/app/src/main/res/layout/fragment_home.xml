@@ -147,6 +147,7 @@
                 android:layout_height="166dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_corner_smaller"
+                android:backgroundTint="@color/green_500"
                 android:text="@string/lihat_semua"
                 android:gravity="start|bottom"
                 android:elevation="5dp"

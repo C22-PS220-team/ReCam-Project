@@ -30,8 +30,8 @@ class SplashFragment : Fragment() {
         animation.setDuration(1900)
         animation.interpolator
         animation.start()
-        val appName = getString(R.string.app_name)
-        binding.version.text ="$appName \nVersi ${BuildConfig.VERSION_NAME}"
+        val versi = getString(R.string.version)
+        binding.version.text ="$versi ${BuildConfig.VERSION_NAME}"
         return root
     }
 }

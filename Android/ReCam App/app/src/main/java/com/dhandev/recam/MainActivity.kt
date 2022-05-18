@@ -1,6 +1,7 @@
 package com.dhandev.recam
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,10 +13,12 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dhandev.recam.databinding.ActivityMainBinding
 import com.dhandev.recam.ui.camera.ResultCameraActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var sharedPred : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.bottomNav
+
+        loadLang()
 
         binding.apply {
             navView.background = null
@@ -51,5 +56,17 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
 
         navView.setupWithNavController(navController)
+    }
+
+    private fun loadLang() {
+        sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
+        val language = sharedPred.getString("Bahasa", "en")
+
+        val config = resources.configuration
+        val locale = Locale(language)
+
+        Locale.setDefault(locale)
+        config.locale = locale
+        resources.updateConfiguration(config, resources.displayMetrics)
     }
 }
