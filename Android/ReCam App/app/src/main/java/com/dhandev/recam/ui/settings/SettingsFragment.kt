@@ -11,8 +11,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.dhandev.recam.MainActivity
+import com.dhandev.recam.R
+import com.dhandev.recam.TokenPreference
 import com.dhandev.recam.databinding.FragmentSettingsBinding
+import com.dhandev.recam.ui.login.LoginActivity
 import java.util.*
 
 class SettingsFragment : Fragment() {
@@ -47,11 +52,11 @@ class SettingsFragment : Fragment() {
 
             ganti.setOnCheckedChangeListener { switch, isChecked ->
                 if (isChecked) {
-                    Toast.makeText(requireContext(), "Bahasa Indonesia", Toast.LENGTH_LONG).show();
+                    Toast.makeText(requireContext(), "Bahasa Indonesia", Toast.LENGTH_LONG).show()
                     setLang("in", 1)
 
                 } else {
-                    Toast.makeText(requireContext(), "English", Toast.LENGTH_LONG).show();
+                    Toast.makeText(requireContext(), "English", Toast.LENGTH_LONG).show()
                     setLang("en", 0)
                 }
             }
@@ -81,4 +86,5 @@ class SettingsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
