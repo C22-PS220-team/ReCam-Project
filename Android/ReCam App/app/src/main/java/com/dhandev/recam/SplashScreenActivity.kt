@@ -34,7 +34,8 @@ class SplashScreenActivity : AppCompatActivity() {
                 token.getToken().isNullOrBlank() -> startActivity(Intent(this,LoginActivity::class.java))
                 else -> startActivity(Intent(this,MainActivity::class.java))
             }
-        }, 4000)
+            finish()
+        }, 2000)
     }
     private fun version(){
         val versi = getString(R.string.version)
