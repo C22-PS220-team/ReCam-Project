@@ -2,7 +2,10 @@ package com.dhandev.recam.ui.login
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.recam.BuildConfig
 import com.dhandev.recam.MainActivity
@@ -20,10 +23,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        loadLang()
         verification()
         login()
         register()
-        loadLang()
+        setupView()
     }
     private fun verification(){
 
@@ -48,5 +52,17 @@ class LoginActivity : AppCompatActivity() {
         Locale.setDefault(locale)
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
+    }
+    private fun setupView() {
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
     }
 }

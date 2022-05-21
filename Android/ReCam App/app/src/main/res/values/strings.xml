@@ -36,4 +36,5 @@
     <string name="recam" translatable="false">ReCam</string>
     <string name="hi_welcome_to">Hi, Welcome to</string>
     <string name="ask_register">don\'t have an account?</string>
+    <string name="hello_blank_fragment">Choose image</string>
 </resources>

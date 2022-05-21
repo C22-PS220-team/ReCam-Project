@@ -23,7 +23,6 @@
     <string name="lanjut">Lanjut</string>
     <string name="galeri">Galeri</string>
     <string name="kamera">Kamera</string>
-    <string name="queryHint">Kreasi dari botol plastik</string>
     <string name="version">Versi</string>
     <string name="cardboard">Kardus</string>
     <string name="paper">Kertas</string>
@@ -34,4 +33,6 @@
     <string name="hi_welcome_to">Hi, Selamat Datang di</string>
     <string name="sign_in">Masuk</string>
     <string name="password">Kata Sandi</string>
+    <string name="hello_blank_fragment">Pilih Gambar</string>
+    <string name="queryHint">Kreasi dari botol plastik</string>
 </resources>
