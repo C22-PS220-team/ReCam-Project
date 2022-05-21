@@ -40,17 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navController.addOnDestinationChangedListener{_, destination, _ ->
-            if (destination.id == R.id.splashFragment){
-                navView.visibility = View.GONE
-                binding.bottomNav.visibility = View.GONE
-                binding.fabCamera.visibility = View.GONE
-                binding.coordinatorLayout.visibility = View.GONE
-            } else {
                 navView.visibility = View.VISIBLE
                 binding.bottomNav.visibility = View.VISIBLE
                 binding.fabCamera.visibility = View.VISIBLE
                 binding.coordinatorLayout.visibility = View.VISIBLE
-            }
         }
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

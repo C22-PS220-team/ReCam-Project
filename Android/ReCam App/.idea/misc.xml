@@ -33,13 +33,20 @@
         <entry key="..\:/College Life/Bangkit/Capstone/ReCam/app/src/main/res/layout/fragment_home.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/ReCam/app/src/main/res/layout/fragment_settings.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/ReCam/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2989583333333333" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_camera.xml" value="0.20416666666666666" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_settings.xml" value="0.20416666666666666" />
-        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_splash.xml" value="0.1" />
+        <entry key="..\:/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_splash.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner.xml" value="0.1945" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner_smaller.xml" value="0.1" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_login.xml" value="0.18" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_register.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_settings.xml" value="0.1287568306010929" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_splash.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
@@ -48,12 +55,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>
