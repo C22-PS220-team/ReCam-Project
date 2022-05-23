@@ -42,20 +42,9 @@ class SplashScreenActivity : AppCompatActivity() {
         binding.version.text ="$versi ${BuildConfig.VERSION_NAME}"
     }
     private fun animation(){
-        ObjectAnimator.ofFloat(binding.logogram, View.ALPHA,1f).apply {
-            duration = 500
-        }.start()
-
-        val version = ObjectAnimator.ofFloat(binding.version, View.ALPHA, 1f).setDuration(500)
-
         val animation : ObjectAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0, 110)
         animation.duration = 1900
         animation.interpolator
         animation.start()
-
-        AnimatorSet().apply {
-            playSequentially(version)
-            start()
-        }
     }
 }

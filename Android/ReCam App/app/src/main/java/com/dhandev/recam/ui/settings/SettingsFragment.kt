@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -21,6 +22,7 @@ import com.dhandev.recam.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import java.util.*
 
 class SettingsFragment : Fragment() {
@@ -73,9 +75,25 @@ class SettingsFragment : Fragment() {
                 }
             }
             keluar.setOnClickListener {
-                auth.signOut()
-                startActivity(Intent(requireContext(), LoginActivity::class.java))
-                activity?.finish()
+                val user = Firebase.auth.currentUser
+                user?.let {
+                    val name = user.displayName
+                    val BottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
+                        .setTitle("Keluar?")
+                        .setMessage("$name, Kamu yakin mau keluar?")
+                        .setCancelable(true)
+                        .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24){dialog, which ->
+                            auth.signOut()
+                            startActivity(Intent(requireContext(), LoginActivity::class.java))
+                            activity?.finish() }
+                        .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
+                            dialog.dismiss()
+                        }
+                        .setAnimation("logout.json")
+                        .build()
+                    BottomSheetDialog.show()
+                    BottomSheetDialog.animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
+                }
             }
         }
 
