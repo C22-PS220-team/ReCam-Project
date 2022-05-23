@@ -11,11 +11,9 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.dhandev.recam.BuildConfig
 import com.dhandev.recam.MainActivity
 import com.dhandev.recam.R
 import com.dhandev.recam.databinding.ActivityLoginBinding
-import com.dhandev.recam.ui.home.HomeFragment
 import com.dhandev.recam.ui.register.RegisterActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -28,7 +26,6 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import java.util.*
-import kotlin.math.sign
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
@@ -152,11 +149,13 @@ class LoginActivity : AppCompatActivity() {
     private fun register(){
         binding.txtRegister.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
+            finish()
         }
     }
     private fun login(){
         binding.btnLogin.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
     }
     private fun loadLang() {

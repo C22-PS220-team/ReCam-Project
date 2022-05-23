@@ -13,6 +13,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.dhandev.recam.databinding.ActivityResultCameraBinding
 import com.dhandev.recam.rotateBitmap
+import com.dhandev.recam.ui.result.ResultActivity
 import com.dhandev.recam.uriToFile
 import java.io.File
 
@@ -73,6 +74,10 @@ class ResultCameraActivity : AppCompatActivity() {
             }
             arrowBack.setOnClickListener {
                 onBackPressed()
+            }
+            btnLanjut.setOnClickListener {
+                startActivity(Intent(this@ResultCameraActivity,ResultActivity::class.java))
+                finish()
             }
         }
     }

@@ -39,7 +39,6 @@
     <string name="hello_blank_fragment">Choose image</string>
     <string name="or_login_with">OR</string>
     <string name="register_hint">Please complete the following data to register.</string>
-    <string name="name_of_creativity">Name of Creativity</string>
     <string name="recommendation" translatable="false">Recommendation</string>
     <string name="name_of_creativity" translatable="false">Name of Creativity</string>
     <string name="ingredients" translatable="false">ingredients</string>

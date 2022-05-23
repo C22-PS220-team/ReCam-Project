@@ -43,7 +43,6 @@ class HomeFragment : Fragment() {
                     .into(avatar)
                 userName.text = name
             }
-
         }
 
         return root
