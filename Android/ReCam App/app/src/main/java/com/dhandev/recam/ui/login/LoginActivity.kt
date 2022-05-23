@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.recam.BuildConfig
@@ -34,12 +35,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var sharedPred : SharedPreferences
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
+    private var kodeBahasa = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        loadLang()
         login()
         register()
         setupView()
@@ -57,8 +58,45 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
             signInButton.setSize(SignInButton.SIZE_WIDE)
             signInButton.setOnClickListener { loginWithGoogle() }
+
+            sharedPred = this@LoginActivity.getSharedPreferences("User", MODE_PRIVATE)
+            kodeBahasa = sharedPred.getInt("kodeBahasa", 0)
+            when(kodeBahasa){
+                1 -> binding.ganti.isChecked = true
+                0 -> binding.ganti.isChecked = false
+            }
+
+            ganti.setOnCheckedChangeListener { switch, isChecked ->
+                if (isChecked) {
+                    Toast.makeText(this@LoginActivity, "Bahasa Indonesia", Toast.LENGTH_LONG).show()
+                    setLang("in", 1)
+
+                } else {
+                    Toast.makeText(this@LoginActivity, "English", Toast.LENGTH_LONG).show()
+                    setLang("en", 0)
+                }
+            }
         }
+        loadLang()
     }
+
+    private fun setLang(Lang: String, kodeBahasa : Int) {
+        sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = sharedPred.edit()
+        editor.putInt("kodeBahasa", kodeBahasa)
+        editor.putString("Bahasa", Lang)
+        editor.apply()
+
+        val config = resources.configuration
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+
+        this.recreate()
+    }
+
 
     private fun loginWithGoogle() {
         val signInIntent = googleSignInClient.signInIntent
