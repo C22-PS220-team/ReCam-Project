@@ -27,7 +27,7 @@
     <string name="cardboard">Kardus</string>
     <string name="paper">Kertas</string>
     <string name="sign_up">Daftar</string>
-    <string name="name">nama</string>
+    <string name="name">Nama</string>
     <string name="register">Daftar</string>
     <string name="ask_register">Belum punya akun?</string>
     <string name="hi_welcome_to">Hi, Selamat Datang di</string>
@@ -36,4 +36,5 @@
     <string name="hello_blank_fragment">Pilih Gambar</string>
     <string name="queryHint">Kreasi dari botol plastik</string>
     <string name="or_login_with">ATAU</string>
+    <string name="register_hint">Silahkan lengkapi data berikut untuk mendaftar.</string>
 </resources>

@@ -23,9 +23,9 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        animation()
         verification()
         version()
-        animation()
     }
     private fun verification(){
         Handler(Looper.myLooper()!!).postDelayed({
@@ -43,8 +43,9 @@ class SplashScreenActivity : AppCompatActivity() {
     }
     private fun animation(){
         val animation : ObjectAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0, 110)
-        animation.duration = 1900
+        animation.duration = 2000
         animation.interpolator
         animation.start()
+        return
     }
 }

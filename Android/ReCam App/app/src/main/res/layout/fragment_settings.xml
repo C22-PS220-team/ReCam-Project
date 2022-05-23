@@ -34,12 +34,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        app:track="@drawable/track_lang"
+        android:elevation="5dp"
         android:thumb="@drawable/thumb"
         app:layout_constraintBottom_toBottomOf="@+id/bahasa"
         app:layout_constraintEnd_toEndOf="@+id/bahasa"
         app:layout_constraintTop_toTopOf="@+id/bahasa"
-        android:elevation="5dp"/>
+        app:track="@drawable/track_lang" />
 
     <Button
         android:id="@+id/notifikasi"

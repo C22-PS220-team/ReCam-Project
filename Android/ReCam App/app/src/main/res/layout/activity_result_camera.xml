@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/pilih_gambar"
         android:textSize="20sp"
+        android:textColor="@color/abu"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/arrowBack"

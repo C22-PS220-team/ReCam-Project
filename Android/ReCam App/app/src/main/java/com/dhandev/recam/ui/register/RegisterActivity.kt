@@ -22,6 +22,12 @@ class RegisterActivity : AppCompatActivity() {
         loadLang()
         finishedRegister()
         setupView()
+
+        binding.apply {
+            arrowBack.setOnClickListener {
+                onBackPressed()
+            }
+        }
     }
     private fun finishedRegister(){
         binding.btnRegister.setOnClickListener {
