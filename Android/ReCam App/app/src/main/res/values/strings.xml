@@ -27,14 +27,15 @@
     <string name="cardboard">Cardboard</string>
     <string name="paper">Paper</string>
     <string name="queryHint">Creation from plastic bottle</string>
-    <string name="email" translatable="false">email</string>
+    <string name="email" translatable="false">Email</string>
     <string name="password">password</string>
-    <string name="sign_in">sign in</string>
+    <string name="sign_in">Sign In</string>
     <string name="register">Register</string>
     <string name="name">name</string>
     <string name="sign_up">Sign Up</string>
     <string name="recam" translatable="false">ReCam</string>
     <string name="hi_welcome_to">Hi, Welcome to</string>
-    <string name="ask_register">don\'t have an account?</string>
+    <string name="ask_register">Don\'t have an account?</string>
     <string name="hello_blank_fragment">Choose image</string>
+    <string name="or_login_with">OR</string>
 </resources>

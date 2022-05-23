@@ -18,12 +18,16 @@ import com.dhandev.recam.R
 import com.dhandev.recam.TokenPreference
 import com.dhandev.recam.databinding.FragmentSettingsBinding
 import com.dhandev.recam.ui.login.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var auth: FirebaseAuth
     private var kodeBahasa = 0
 
     // This property is only valid between onCreateView and
@@ -48,6 +52,14 @@ class SettingsFragment : Fragment() {
             0 -> binding.ganti.isChecked = false
         }
 
+        auth = Firebase.auth
+        val firebaseUser = auth.currentUser
+        if (firebaseUser == null) {
+            // Not signed in, launch the Login activity
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            activity?.finish()
+        }
+
         binding.apply {
 
             ganti.setOnCheckedChangeListener { switch, isChecked ->
@@ -59,6 +71,11 @@ class SettingsFragment : Fragment() {
                     Toast.makeText(requireContext(), "English", Toast.LENGTH_LONG).show()
                     setLang("en", 0)
                 }
+            }
+            keluar.setOnClickListener {
+                auth.signOut()
+                startActivity(Intent(requireContext(), LoginActivity::class.java))
+                activity?.finish()
             }
         }
 

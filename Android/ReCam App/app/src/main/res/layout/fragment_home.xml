@@ -47,10 +47,10 @@
             app:layout_constraintTop_toBottomOf="@id/textView2" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/avatar"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:background="@drawable/rounded_corner"
+            tools:background="@drawable/rounded_corner"
             app:layout_constraintBottom_toBottomOf="@+id/userName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.944"

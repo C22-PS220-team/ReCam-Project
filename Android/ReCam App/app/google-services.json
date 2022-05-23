@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "687029028978",
+    "project_id": "recam-d4499",
+    "storage_bucket": "recam-d4499.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687029028978:android:2c0f7ca7d6d36e0c639aeb",
+        "android_client_info": {
+          "package_name": "com.dhandev.recam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687029028978-1i5pp5ck5u9oe1o2hp5eittjjc4dk8pi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhandev.recam",
+            "certificate_hash": "d908d88bd2cecffdb9f9ee6a0a927dd700850574"
+          }
+        },
+        {
+          "client_id": "687029028978-17nsor6lq23m8utlbtqr4a4d54ce15in.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1RKy9osVYI-GaAz_XMPgKSrBJ7kTU0UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687029028978-17nsor6lq23m8utlbtqr4a4d54ce15in.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
