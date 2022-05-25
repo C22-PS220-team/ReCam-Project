@@ -149,7 +149,6 @@ class LoginActivity : AppCompatActivity() {
     private fun register(){
         binding.txtRegister.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
-            finish()
         }
     }
     private fun login(){
