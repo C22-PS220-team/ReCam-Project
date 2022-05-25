@@ -74,8 +74,7 @@ class ResultCameraActivity : AppCompatActivity() {
                 launcherIntentGallery.launch(chooser)
             }
             arrowBack.setOnClickListener {
-                startActivity(Intent(this@ResultCameraActivity,MainActivity::class.java))
-                finish()
+                onBackPressed()
             }
             btnLanjut.setOnClickListener {
                 startActivity(Intent(this@ResultCameraActivity,ResultActivity::class.java))
