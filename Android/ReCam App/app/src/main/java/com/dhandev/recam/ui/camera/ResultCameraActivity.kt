@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.dhandev.recam.MainActivity
 import com.dhandev.recam.databinding.ActivityResultCameraBinding
 import com.dhandev.recam.rotateBitmap
 import com.dhandev.recam.ui.result.ResultActivity
@@ -73,7 +74,8 @@ class ResultCameraActivity : AppCompatActivity() {
                 launcherIntentGallery.launch(chooser)
             }
             arrowBack.setOnClickListener {
-                onBackPressed()
+                startActivity(Intent(this@ResultCameraActivity,MainActivity::class.java))
+                finish()
             }
             btnLanjut.setOnClickListener {
                 startActivity(Intent(this@ResultCameraActivity,ResultActivity::class.java))

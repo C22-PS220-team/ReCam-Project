@@ -18,11 +18,6 @@ class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +26,7 @@ class ResultFragment : Fragment() {
         val root: View = binding.root
         binding.arrowBack.setOnClickListener {
             startActivity(Intent(requireContext(), ResultCameraActivity::class.java))
-            onStop()
+            activity?.finish()
         }
         binding.cardView.setOnClickListener {
             it.findNavController().navigate(R.id.action_resultFragment_to_detailFragment)

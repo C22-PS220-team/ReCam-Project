@@ -42,4 +42,5 @@
     <string name="recommendation" translatable="false">Recommendation</string>
     <string name="name_of_creativity" translatable="false">Name of Creativity</string>
     <string name="ingredients" translatable="false">ingredients</string>
+    <string name="name_of_ingredients" translatable="false">Name of Ingredients</string>
 </resources>

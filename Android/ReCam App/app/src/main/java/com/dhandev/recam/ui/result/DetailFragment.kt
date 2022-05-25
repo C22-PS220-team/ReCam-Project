@@ -23,6 +23,7 @@ class DetailFragment : Fragment() {
         binding.apply {
             arrowBack.setOnClickListener {
                 startActivity(Intent(requireContext(),ResultActivity::class.java))
+                activity?.finish()
             }
         }
         return root
