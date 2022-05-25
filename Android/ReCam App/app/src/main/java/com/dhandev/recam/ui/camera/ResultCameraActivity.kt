@@ -78,7 +78,6 @@ class ResultCameraActivity : AppCompatActivity() {
             }
             btnLanjut.setOnClickListener {
                 startActivity(Intent(this@ResultCameraActivity,ResultActivity::class.java))
-                finish()
             }
         }
     }

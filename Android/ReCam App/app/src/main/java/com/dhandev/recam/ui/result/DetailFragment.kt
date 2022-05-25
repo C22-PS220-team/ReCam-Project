@@ -22,8 +22,7 @@ class DetailFragment : Fragment() {
         val root: View = binding.root
         binding.apply {
             arrowBack.setOnClickListener {
-                startActivity(Intent(requireContext(),ResultActivity::class.java))
-                activity?.finish()
+                activity?.onBackPressed()
             }
         }
         return root
