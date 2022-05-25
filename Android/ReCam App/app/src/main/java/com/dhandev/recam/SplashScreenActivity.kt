@@ -3,18 +3,28 @@ package com.dhandev.recam
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.widget.CompoundButton
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.graphics.translationMatrix
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.dhandev.recam.databinding.ActivityLoginBinding
 import com.dhandev.recam.databinding.ActivitySplashScreenBinding
 import com.dhandev.recam.ui.login.LoginActivity
+import com.dhandev.recam.ui.settings.SettingsViewModel
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
@@ -26,6 +36,19 @@ class SplashScreenActivity : AppCompatActivity() {
         animation()
         verification()
         version()
+
+        val pref = SettingPreferences.getInstance(this.dataStore)
+        val settingsViewModel =
+            ViewModelProvider(this, ViewModelFactory(pref)).get(SettingsViewModel::class.java)
+
+        settingsViewModel.getThemeSettings().observe(this
+        ) { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
     private fun verification(){
         Handler(Looper.myLooper()!!).postDelayed({
