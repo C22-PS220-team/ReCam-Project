@@ -3,6 +3,7 @@ package com.dhandev.recam.ui.camera
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,7 @@ import java.io.File
 class ResultCameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultCameraBinding
     private var getFile: File? = null
+    private lateinit var result : Bitmap
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -92,10 +94,14 @@ class ResultCameraActivity : AppCompatActivity() {
             val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
 
             getFile = myFile
-            val result = rotateBitmap(
-                BitmapFactory.decodeFile(myFile.path),
-                isBackCamera
-            )
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O){
+                result = rotateBitmap(
+                    BitmapFactory.decodeFile(myFile.path),
+                    isBackCamera
+                )
+            } else{
+                result = BitmapFactory.decodeFile(getFile?.path)
+            }
 
             binding.previewImage.setImageBitmap(result)
         }
