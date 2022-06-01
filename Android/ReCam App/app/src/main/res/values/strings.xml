@@ -44,4 +44,8 @@
     <string name="ingredients" translatable="false">ingredients</string>
     <string name="name_of_ingredients" translatable="false">Name of Ingredients</string>
     <string name="login_hint">To start using ReCam, please login first.</string>
+    <string name="open_terms_condition">By login you agree to the <a href="https://sites.google.com/view/dhandeveloper/">Terms and Conditions</a></string>
+    <string name="login_with_social_networks">Login with Social Networks</string>
+    <string name="Cancel">Cancel</string>
+    <string name="desc_logout">%1$s, Are you sure to logout?</string>
 </resources>

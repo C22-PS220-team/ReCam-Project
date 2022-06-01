@@ -101,14 +101,14 @@ class SettingsFragment : Fragment() {
                 user?.let {
                     val name = user.displayName
                     val BottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
-                        .setTitle("Keluar?")
-                        .setMessage("$name, Kamu yakin mau keluar?")
+                        .setTitle(getString(R.string.keluar))
+                        .setMessage(getString(R.string.desc_logout, name))
                         .setCancelable(true)
-                        .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24){dialog, which ->
+                        .setPositiveButton(getString(R.string.keluar), R.drawable.ic_baseline_done_24){dialog, which ->
                             auth.signOut()
                             startActivity(Intent(requireContext(), LoginActivity::class.java))
                             activity?.finish() }
-                        .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
+                        .setNegativeButton(getString(R.string.Cancel), R.drawable.ic_baseline_close_24) { dialog, which ->
                             dialog.dismiss()
                         }
                         .setAnimation("logout.json")
