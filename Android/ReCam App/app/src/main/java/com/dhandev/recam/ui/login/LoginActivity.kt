@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
@@ -14,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.recam.MainActivity
 import com.dhandev.recam.R
 import com.dhandev.recam.databinding.ActivityLoginBinding
-import com.dhandev.recam.ui.register.RegisterActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -38,8 +38,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        login()
-        register()
         setupView()
 
         // Configure Google Sign In
@@ -73,6 +71,7 @@ class LoginActivity : AppCompatActivity() {
                     setLang("en", 0)
                 }
             }
+            terms.movementMethod = LinkMovementMethod.getInstance()
         }
         loadLang()
     }
@@ -146,17 +145,6 @@ class LoginActivity : AppCompatActivity() {
         updateUI(currentUser)
     }
 
-    private fun register(){
-        binding.txtRegister.setOnClickListener {
-            startActivity(Intent(this,RegisterActivity::class.java))
-        }
-    }
-    private fun login(){
-        binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
-        }
-    }
     private fun loadLang() {
         sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
         val language = sharedPred.getString("Bahasa", "en")

@@ -38,4 +38,8 @@
     <string name="or_login_with">ATAU</string>
     <string name="register_hint">Silahkan lengkapi data berikut untuk mendaftar.</string>
     <string name="login_hint">Untuk mulai menggunakan ReCam, silahkan login terlebih dahulu.</string>
+    <string name="open_terms_condition">Dengan login, Anda setuju terhadap <a href="https://sites.google.com/view/dhandeveloper/">Syarat dan Ketentuan</a></string>
+    <string name="login_with_social_networks">Masuk dengan Jejaring Sosial</string>
+    <string name="Cancel">Batal</string>
+    <string name="desc_logout">%1$s, Apakah Anda yakin untuk keluar?</string>
 </resources>
