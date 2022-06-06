@@ -25,8 +25,7 @@ class ResultFragment : Fragment() {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.arrowBack.setOnClickListener {
-            startActivity(Intent(requireContext(), ResultCameraActivity::class.java))
-            activity?.finish()
+            activity?.onBackPressed()
         }
         binding.cardView.setOnClickListener {
             it.findNavController().navigate(R.id.action_resultFragment_to_detailFragment)

@@ -6,7 +6,7 @@
     <string name="perubahan_iklim_kian_berbahaya" translatable="false"><b>Perubahan iklim kian berbahaya</b>\n<i>Climate Change</i></string>
     <string name="ganti_gambar">Change Image</string>
     <string name="ubah_bahasa">Change Language</string>
-    <string name="notifikasi">Notification</string>
+    <string name="mode_gelap">Dark Mode</string>
     <string name="tentang">About</string>
     <string name="keluar">Logout</string>
     <string name="selamat_datang">Welcome,</string>
@@ -43,4 +43,9 @@
     <string name="name_of_creativity" translatable="false">Name of Creativity</string>
     <string name="ingredients" translatable="false">ingredients</string>
     <string name="name_of_ingredients" translatable="false">Name of Ingredients</string>
+    <string name="login_hint">To start using ReCam, please login first.</string>
+    <string name="open_terms_condition">By login you agree to the <a href="https://sites.google.com/view/dhandeveloper/">Terms and Conditions</a></string>
+    <string name="login_with_social_networks">Login with Social Networks</string>
+    <string name="Cancel">Cancel</string>
+    <string name="desc_logout">%1$s, Are you sure to logout?</string>
 </resources>

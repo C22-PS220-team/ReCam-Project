@@ -8,15 +8,29 @@
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable-v24/rounded_corner_smaller.xml" value="0.212" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.183" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_baseline_camera_24.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_baseline_mode_night_24.xml" value="0.183" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml" value="0.183" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner_atas.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner_bawah.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/switch_thumb_dark.xml" value="0.183" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/switch_thumb_false.xml" value="0.183" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/switch_thumb_light.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/switch_thumb_true.xml" value="0.183" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/thumb.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/thumb1.xml" value="0.212" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/track_lang.xml" value="0.212" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_camera.xml" value="0.2971014492753623" />
-        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.2971014492753623" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.2988679352838745" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_main.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_register.xml" value="0.2971014492753623" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_result.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_result_camera.xml" value="0.2988679352838745" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_splash_screen.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_camera.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_dashboard.xml" value="0.2971014492753623" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_detail.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_home.xml" value="0.2988679352838745" />
+        <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_result.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_settings.xml" value="0.2988679352838745" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/layout/fragment_splash.xml" value="0.2971014492753623" />
         <entry key="..\:/College Life/Bangkit/Capstone/Baru/ReCam-Project/Android/ReCam App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.149" />
@@ -38,9 +52,7 @@
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1945" />
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner.xml" value="0.1945" />
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/drawable/rounded_corner_smaller.xml" value="0.1" />
-        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_camera.xml" value="0.75" />
-        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_camera.xml" value="0.75" />
-        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/Rozin/StudioProjects/ReCam-Project/Android/ReCam App/app/src/main/res/layout/activity_result.xml" value="0.1" />
@@ -63,12 +75,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

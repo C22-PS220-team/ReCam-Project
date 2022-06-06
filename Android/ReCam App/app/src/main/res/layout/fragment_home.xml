@@ -82,7 +82,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:text="@string/featured"
-            android:textColor="@color/abu"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -155,7 +155,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:text="@string/kategori"
-            android:textColor="@color/abu"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
@@ -228,7 +228,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:text="@string/artikel"
-            android:textColor="@color/abu"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearKategori2" />
@@ -241,7 +241,7 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="@string/lebih_banyak"
-            android:textColor="@color/abu"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvArtikel"
