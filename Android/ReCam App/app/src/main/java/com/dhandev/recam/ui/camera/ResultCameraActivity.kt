@@ -3,12 +3,15 @@ package com.dhandev.recam.ui.camera
 import android.Manifest
 import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.media.ThumbnailUtils
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
@@ -20,6 +23,7 @@ import androidx.core.content.ContextCompat
 import com.dhandev.recam.databinding.ActivityResultCameraBinding
 import com.dhandev.recam.ml.Model3
 import com.dhandev.recam.rotateBitmap
+import com.dhandev.recam.ui.result.ResultActivity
 import com.dhandev.recam.uriToFile
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
@@ -34,6 +38,7 @@ class ResultCameraActivity : AppCompatActivity() {
     private var getFile: File? = null
     private lateinit var bitmap: Bitmap
     val imageSize = 256
+    private lateinit var sharepref : SharedPreferences
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -89,14 +94,12 @@ class ResultCameraActivity : AppCompatActivity() {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
-//            btnLanjut.setOnClickListener {
-//                startActivity(Intent(this@ResultCameraActivity,ResultActivity::class.java))
-//            }
             btnLanjut.setOnClickListener(View.OnClickListener {
                 var resize = Bitmap.createScaledBitmap(bitmap, imageSize, imageSize, false)
                 classifyImage(resize)
             })
         }
+        sharepref = this.getSharedPreferences("KLASIFIKASI", MODE_PRIVATE)
     }
 
     private val launcherIntentCameraX = registerForActivityResult(
@@ -166,6 +169,13 @@ class ResultCameraActivity : AppCompatActivity() {
             }
         }
         Toast.makeText(this, listBahan[maxPos], Toast.LENGTH_SHORT).show()
+        val editor : SharedPreferences.Editor = sharepref.edit()
+        editor.putString("RESULT_DETECT", listBahan[maxPos])
+        editor.apply()
+        Handler(Looper.myLooper()!!).postDelayed({
+        val intent = Intent(this@ResultCameraActivity,ResultActivity::class.java)
+        startActivity(intent)
+        },10000)
 
         model.close()
     }
