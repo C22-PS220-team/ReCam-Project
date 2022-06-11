@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReCam">
         <activity
+            android:name=".ui.result.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.result.ResultActivity"
             android:exported="false" />
         <activity

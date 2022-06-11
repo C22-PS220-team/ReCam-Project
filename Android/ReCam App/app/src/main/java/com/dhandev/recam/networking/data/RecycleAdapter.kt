@@ -24,15 +24,24 @@ class RecycleAdapter : RecyclerView.Adapter<RecycleAdapter.UserViewHolder>() {
 
     inner class UserViewHolder(val binding: ItemRowResultBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        var context = itemView.context
         fun bind(user: ResponsePaperItem) {
             binding.apply {
+                root.setOnClickListener{
+                    onItemClickCallback?.onItemClicked(user)
+                }
                 Glide.with(itemView)
                     .load(user.image)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .centerCrop()
                     .into(imageView2)
                 Title.text = user.judul
-                desc.text = user.diskripsi
+                desc.text = user.isih1
+//                itemView.setOnClickListener {
+//                    val intent = Intent(context, MainActivity::class.java)
+//                    intent.putExtra("item", user)
+//                    context.startActivity(intent)
+//                }
             }
             Log.e(RecycleAdapter::class.java.simpleName,"User : ${user} ")
         }

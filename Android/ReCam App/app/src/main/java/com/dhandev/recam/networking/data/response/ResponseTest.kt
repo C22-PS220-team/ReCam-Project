@@ -1,6 +1,8 @@
 package com.dhandev.recam.networking.data.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class ResponseTest(
 
@@ -8,17 +10,21 @@ data class ResponseTest(
 	val responseTest: List<ResponseTestItem>
 )
 
+@Parcelize
 data class ResponseTestItem(
 
-	@field:SerializedName("link")
-	val link: String,
+	@field:SerializedName("image")
+	val image: String,
 
-	@field:SerializedName("description")
-	val description: String,
+	@field:SerializedName("diskripsi")
+	val diskripsi: String,
 
-	@field:SerializedName("title")
-	val title: String,
+	@field:SerializedName("header1")
+	val header1: String,
 
-	@field:SerializedName("pubDate")
-	val pubDate: String
-)
+	@field:SerializedName("isih1")
+	val isih1: String,
+
+	@field:SerializedName("judul")
+	val judul: String
+) : Parcelable

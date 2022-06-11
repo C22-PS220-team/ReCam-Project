@@ -168,14 +168,14 @@ class ResultCameraActivity : AppCompatActivity() {
                 maxPos = i
             }
         }
-        Toast.makeText(this, listBahan[maxPos], Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, listBahan[maxPos], Toast.LENGTH_SHORT).show()
+
         val editor : SharedPreferences.Editor = sharepref.edit()
         editor.putString("RESULT_DETECT", listBahan[maxPos])
         editor.apply()
-        Handler(Looper.myLooper()!!).postDelayed({
         val intent = Intent(this@ResultCameraActivity,ResultActivity::class.java)
+        intent.putExtra("result", listBahan[maxPos])
         startActivity(intent)
-        },10000)
 
         model.close()
     }

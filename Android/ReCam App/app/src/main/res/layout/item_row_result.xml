@@ -27,29 +27,37 @@
 
         <TextView
             android:id="@+id/Title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
             android:text="@string/name_of_creativity"
+            android:textColor="@color/abu"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/abu"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toEndOf="@+id/imageView2"
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/desc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="4dp"
-            android:textSize="14sp"
             android:text="@string/ingredients"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
             card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toEndOf="@+id/imageView2"
             card_view:layout_constraintTop_toBottomOf="@+id/Title"
-            card_view:layout_constraintVertical_bias="0.047" />
+            card_view:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
