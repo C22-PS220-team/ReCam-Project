@@ -42,4 +42,5 @@
     <string name="login_with_social_networks">Masuk dengan Jejaring Sosial</string>
     <string name="Cancel">Batal</string>
     <string name="desc_logout">%1$s, Apakah Anda yakin untuk keluar?</string>
+    <string name="ideas_from">Ide kreasi dari %1$s</string>
 </resources>

@@ -3,7 +3,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_camera">Camera</string>
     <string name="title_settings">Settings</string>
-    <string name="perubahan_iklim_kian_berbahaya" translatable="false"><b>Perubahan iklim kian berbahaya</b>\n<i>Climate Change</i></string>
+    <string name="perubahan_iklim_kian_berbahaya" translatable="false">Perubahan iklim kian berbahaya</string>
     <string name="ganti_gambar">Change Image</string>
     <string name="ubah_bahasa">Change Language</string>
     <string name="mode_gelap">Dark Mode</string>
@@ -48,4 +48,5 @@
     <string name="login_with_social_networks">Login with Social Networks</string>
     <string name="Cancel">Cancel</string>
     <string name="desc_logout">%1$s, Are you sure to logout?</string>
+    <string name="ideas_from">Craft ideas from %1$s</string>
 </resources>

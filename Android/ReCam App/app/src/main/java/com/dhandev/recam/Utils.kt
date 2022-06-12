@@ -5,10 +5,16 @@ import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.browser.customtabs.CustomTabColorSchemeParams
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.graphics.drawable.toBitmap
 import java.io.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -104,4 +110,14 @@ fun reduceFileImage(file: File): File {
     } while (streamLength > 1000000)
     bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
     return file
+}
+
+fun customTab(context: Context, dataUrl: String){
+    val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
+    val colorInt : Int = Color.parseColor("#17AC6A")
+    val defaulColor : CustomTabColorSchemeParams = CustomTabColorSchemeParams.Builder().setToolbarColor(colorInt).build()
+    builder.setDefaultColorSchemeParams(defaulColor)
+    builder.setShowTitle(true)
+    val customTabsIntent: CustomTabsIntent = builder.build()
+    context.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(dataUrl)) }
 }

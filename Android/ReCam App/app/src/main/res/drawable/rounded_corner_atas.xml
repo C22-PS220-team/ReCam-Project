@@ -3,6 +3,6 @@
     android:shape="rectangle"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/pucat_200"/>
-    <corners android:topLeftRadius="15dp"
-        android:topRightRadius="15dp"/>
+    <corners android:topLeftRadius="25dp"
+        android:topRightRadius="25dp"/>
 </shape>

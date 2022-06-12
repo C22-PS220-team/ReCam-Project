@@ -20,6 +20,9 @@ import com.dhandev.recam.databinding.FragmentResultBinding
 import com.dhandev.recam.networking.data.RecycleAdapter
 import com.dhandev.recam.networking.data.response.ResponsePaperItem
 import com.dhandev.recam.networking.data.response.ResponseTestItem
+import com.faltenreich.skeletonlayout.Skeleton
+import com.faltenreich.skeletonlayout.applySkeleton
+import java.util.*
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
@@ -27,6 +30,7 @@ class ResultFragment : Fragment() {
     private lateinit var viewModel: ResultViewModel
     private lateinit var recycleAdapter: RecycleAdapter
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var skeleton: Skeleton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +44,19 @@ class ResultFragment : Fragment() {
         sharedPreferences = requireActivity().getSharedPreferences("KLASIFIKASI",
             AppCompatActivity.MODE_PRIVATE
         )
-        val klasifikasi = sharedPreferences.getString("RESULT_DETECT", "test")
+        var klasifikasi = sharedPreferences.getString("RESULT_DETECT", "test")
+        if (Locale.getDefault().language.toString().equals("en")){
+            when(klasifikasi){
+                "kertas" -> klasifikasi = "paper"
+                "kaca" -> klasifikasi = "glass"
+                "kardus" -> klasifikasi = "cardboard"
+                "logam" -> klasifikasi = "metal"
+                "plastk" -> klasifikasi = "plastic"
+                "trash" -> klasifikasi = "trash"
+            }
+        }
+        binding.nameOfCreativity.text = getString(R.string.ideas_from, klasifikasi)
+        //apply recycleView
         recycleAdapter = RecycleAdapter()
         binding.rvList.layoutManager = LinearLayoutManager(requireContext())
         viewModel = ViewModelProvider(this)[ResultViewModel::class.java]
@@ -59,12 +75,16 @@ class ResultFragment : Fragment() {
         if (result != null) {
             viewModel.setSearchUsers(result)
         }
+        skeleton = binding.rvList.applySkeleton(R.layout.item_row_result)
+        skeleton.showSkeleton()
+
         viewModel.getSearchUsers().observe(requireActivity()){
             if (it != null){
                 recycleAdapter.setList(it)
                 Log.e(requireActivity()::class.java.simpleName,"adapter : $recycleAdapter ")
+                skeleton.showOriginal()
             }else{
-                Log.e(requireActivity()::class.java.simpleName,"nggak ada isinya ")
+                Log.e(requireActivity()::class.java.simpleName,"data not found")
             }
         }
 
