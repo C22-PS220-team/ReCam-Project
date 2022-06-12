@@ -10,27 +10,10 @@
 
     <ImageView
         android:id="@+id/arrowBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_corner_smaller"
-        android:padding="5dp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        app:tint="?android:attr/colorAccent"
+        style="@style/arrowBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/recomend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/recommendation"
-        android:textColor="@color/abu"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name_of_creativity"
@@ -39,25 +22,45 @@
         android:text="@string/name_of_ingredients"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/abu"
+        android:textColor="?android:attr/textColorPrimary"
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/arrowBack"
         app:layout_constraintStart_toEndOf="@+id/arrowBack"
         app:layout_constraintTop_toTopOf="@id/arrowBack" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeletonLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvList"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_row_result"/>
-    </androidx.cardview.widget.CardView>
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_corner_atas"
+            android:backgroundTint="?android:attr/colorBackground"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_of_creativity">
+
+            <ImageView
+                android:id="@+id/bahan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                tools:src="@drawable/logogram" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_row_result" />
+        </LinearLayout>
+
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

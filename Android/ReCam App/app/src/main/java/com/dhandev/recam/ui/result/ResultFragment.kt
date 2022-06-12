@@ -2,6 +2,7 @@ package com.dhandev.recam.ui.result
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,12 +15,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.dhandev.recam.MainActivity
 import com.dhandev.recam.R
 import com.dhandev.recam.databinding.FragmentResultBinding
+import com.dhandev.recam.loadImage
 import com.dhandev.recam.networking.data.RecycleAdapter
 import com.dhandev.recam.networking.data.response.ResponsePaperItem
 import com.dhandev.recam.networking.data.response.ResponseTestItem
+import com.faltenreich.skeletonlayout.Skeleton
+import com.faltenreich.skeletonlayout.applySkeleton
+import java.util.*
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
@@ -27,6 +33,7 @@ class ResultFragment : Fragment() {
     private lateinit var viewModel: ResultViewModel
     private lateinit var recycleAdapter: RecycleAdapter
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var skeleton: Skeleton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +47,8 @@ class ResultFragment : Fragment() {
         sharedPreferences = requireActivity().getSharedPreferences("KLASIFIKASI",
             AppCompatActivity.MODE_PRIVATE
         )
-        val klasifikasi = sharedPreferences.getString("RESULT_DETECT", "test")
+
+        //apply recycleView
         recycleAdapter = RecycleAdapter()
         binding.rvList.layoutManager = LinearLayoutManager(requireContext())
         viewModel = ViewModelProvider(this)[ResultViewModel::class.java]
@@ -50,7 +58,6 @@ class ResultFragment : Fragment() {
                 val intent = Intent(requireContext(), DetailActivity::class.java)
                 intent.putExtra("item", user)
                 requireContext().startActivity(intent)
-                Toast.makeText(requireContext(), "thiss", Toast.LENGTH_SHORT).show()
             }
 
         })
@@ -59,17 +66,37 @@ class ResultFragment : Fragment() {
         if (result != null) {
             viewModel.setSearchUsers(result)
         }
+        skeleton = binding.rvList.applySkeleton(R.layout.item_row_result)
+        skeleton.showSkeleton()
+
         viewModel.getSearchUsers().observe(requireActivity()){
             if (it != null){
                 recycleAdapter.setList(it)
                 Log.e(requireActivity()::class.java.simpleName,"adapter : $recycleAdapter ")
+                skeleton.showOriginal()
             }else{
-                Log.e(requireActivity()::class.java.simpleName,"nggak ada isinya ")
+                Log.e(requireActivity()::class.java.simpleName,"data not found")
             }
+        }
+
+        binding.nameOfCreativity.text = getString(R.string.ideas_from, result)
+        val bahan = result?.trim()
+        when(bahan){
+            "kertas" -> loadImage(requireContext(),"https://docs.google.com/uc?id=19G0wAV3F2DVmu70y5GIbDxa9jomX49bu", binding.bahan)
+            "kardus" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1eZhC0QeQUsJ74zy9ZV7EsOy6c8CywPcG", binding.bahan)
+            "logam" -> loadImage(requireContext(), "https://docs.google.com/uc?id=1nqbgFxaSNfSSV4AhBNo5dRww6_CJWKgX", binding.bahan)
+            "plastik" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1qk-uygHDm3f-75VYhvoEWfUZc_5Woaul", binding.bahan)
         }
 
         return root
     }
+//
+//    private fun imageGlide(url: String) {
+//        Glide.with(requireActivity())
+//            .load(url)
+//            .placeholder(R.drawable.ic_baseline_image_24)
+//            .into(binding.bahan)
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
