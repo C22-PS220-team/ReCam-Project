@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -95,6 +96,19 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), ArticleActivity::class.java))
         }
         binding.apply {
+            search.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    val intent = Intent(requireContext(), ResultActivity::class.java)
+                    intent.putExtra("result", "$query")
+                    startActivity(intent)
+                    return false
+                }
+
+                override fun onQueryTextChange(query: String?): Boolean {
+                    return false;
+                }
+            })
+
             paper.setOnClickListener {
                 val intent = Intent(requireContext(), ResultActivity::class.java)
                 intent.putExtra("result", "kertas")
