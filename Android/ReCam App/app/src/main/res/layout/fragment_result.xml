@@ -28,26 +28,39 @@
         app:layout_constraintStart_toEndOf="@+id/arrowBack"
         app:layout_constraintTop_toTopOf="@id/arrowBack" />
 
-    <LinearLayout
-        android:id="@+id/cardView"
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeletonLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/rounded_corner_atas"
-        android:backgroundTint="?android:attr/colorBackground"
-        app:layout_constraintTop_toBottomOf="@id/name_of_creativity"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.faltenreich.skeletonlayout.SkeletonLayout
-            android:id="@+id/skeletonLayout"
+        <LinearLayout
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_corner_atas"
+            android:backgroundTint="?android:attr/colorBackground"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_of_creativity">
+
+            <ImageView
+                android:id="@+id/bahan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                tools:src="@drawable/logogram" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/item_row_result"/>
-        </com.faltenreich.skeletonlayout.SkeletonLayout>
-    </LinearLayout>
+                tools:listitem="@layout/item_row_result" />
+        </LinearLayout>
+
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

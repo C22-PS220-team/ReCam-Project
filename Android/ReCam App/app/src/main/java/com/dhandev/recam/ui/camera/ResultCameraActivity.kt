@@ -7,31 +7,27 @@ import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.ThumbnailUtils
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.dhandev.recam.R
 import com.dhandev.recam.databinding.ActivityResultCameraBinding
 import com.dhandev.recam.ml.Model3
 import com.dhandev.recam.rotateBitmap
 import com.dhandev.recam.ui.result.ResultActivity
 import com.dhandev.recam.uriToFile
 import org.tensorflow.lite.DataType
-import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.File
+import java.io.InputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
-import kotlin.math.min
 
 class ResultCameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultCameraBinding
@@ -79,6 +75,11 @@ class ResultCameraActivity : AppCompatActivity() {
             val intent = Intent(this@ResultCameraActivity, CameraActivity::class.java)
             launcherIntentCameraX.launch(intent)
         }
+        //set default Bitmap values
+        val defUri = Uri.parse("android.resource://"+ this@ResultCameraActivity.packageName +"/drawable/plastic")
+        val bitmapDef : Bitmap = MediaStore.Images.Media.getBitmap(this@ResultCameraActivity.contentResolver, defUri)
+        bitmap = Bitmap.createBitmap(bitmapDef)
+
         binding.apply {
             btnKamera.setOnClickListener {
                 val intent = Intent(this@ResultCameraActivity, CameraActivity::class.java)
@@ -94,9 +95,14 @@ class ResultCameraActivity : AppCompatActivity() {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
+
             btnLanjut.setOnClickListener(View.OnClickListener {
-                var resize = Bitmap.createScaledBitmap(bitmap, imageSize, imageSize, false)
-                classifyImage(resize)
+                if(bitmap == Bitmap.createBitmap(bitmapDef)){
+                    Toast.makeText(this@ResultCameraActivity, getString(R.string.choose_image), Toast.LENGTH_SHORT).show()
+                } else {
+                    val resize = Bitmap.createScaledBitmap(bitmap, imageSize, imageSize, false)
+                    classifyImage(resize)
+                }
             })
         }
         sharepref = this.getSharedPreferences("KLASIFIKASI", MODE_PRIVATE)

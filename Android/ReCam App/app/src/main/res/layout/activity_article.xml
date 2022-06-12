@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green1"
     tools:context=".ui.article.ArticleActivity">
 
     <ImageView
@@ -25,12 +26,25 @@
         app:layout_constraintTop_toTopOf="@id/arrowBack"
         app:layout_constraintBottom_toBottomOf="@id/arrowBack"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvArticle"
+    <LinearLayout
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arrowBack">
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_atas"
+        android:backgroundTint="?android:attr/colorBackground"
+        app:layout_constraintTop_toBottomOf="@id/arrowBack"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvArticle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrowBack">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

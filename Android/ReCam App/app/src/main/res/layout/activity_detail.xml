@@ -4,34 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/green1"
     tools:context=".ui.result.DetailActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/arrowBack"
-            app:tint="?android:attr/colorAccent"
-            style="@style/arrowBack"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/name_of_creativity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/name_of_creativity"
-            android:textColor="@color/abu"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/arrowBack"
-            app:layout_constraintTop_toTopOf="@id/arrowBack"
-            app:layout_constraintBottom_toBottomOf="@id/arrowBack"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/arrowBack"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/arrowBack"
+                app:tint="?android:attr/colorAccent"
+                style="@style/arrowBack"
+                android:layout_marginTop="0dp"/>
+            <TextView
+                android:id="@+id/name_of_creativity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/name_of_creativity"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corner_atas"
             android:orientation="vertical">
 
             <ImageView
@@ -52,16 +60,11 @@
                 android:layout_marginTop="20dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/alatBahan"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAlatBahan"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Kerajinan 1"
-                android:textColor="?android:attr/textColorPrimary"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:textSize="16sp"/>
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/header2"
@@ -74,16 +77,12 @@
                 android:layout_marginTop="20dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
-            <TextView
-                android:id="@+id/stepByStep"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProsedur"
+                android:scrollbars="vertical"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Kerajinan 2"
-                android:textColor="?android:attr/textColorPrimary"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:textSize="16sp"/>
+                android:layout_height="match_parent"/>
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

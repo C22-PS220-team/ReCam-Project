@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green1"
     tools:context=".ui.camera.ResultCameraActivity">
 
     <ImageView
@@ -18,21 +19,25 @@
         android:layout_height="wrap_content"
         android:text="@string/pilih_gambar"
         android:textSize="20sp"
-        android:textColor="@color/abu"
+        android:textColor="?android:attr/textColorPrimary"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/arrowBack"
         app:layout_constraintStart_toEndOf="@+id/arrowBack"
         app:layout_constraintTop_toTopOf="@id/arrowBack" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="150dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="15dp"
-        android:padding="20dp">
+        app:layout_constraintBottom_toTopOf="@id/tools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowBack">
+
         <ImageView
             android:id="@+id/previewImage"
             android:layout_width="match_parent"
@@ -43,47 +48,58 @@
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
-        android:id="@+id/reTake"
+        android:id="@+id/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/btnLanjut">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnKamera"
-            style="?attr/materialButtonOutlinedStyle"
-            app:cornerRadius="50dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_atas"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/reTake"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginEnd="10dp"
-            android:text="@string/kamera"
-            app:layout_constraintBottom_toTopOf="@+id/btnLanjut" />
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnLanjut">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKamera"
+                style="?attr/materialButtonOutlinedStyle"
+                app:cornerRadius="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginEnd="10dp"
+                android:text="@string/kamera"
+                app:layout_constraintBottom_toTopOf="@+id/btnLanjut" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGaleri"
+                style="?attr/materialButtonOutlinedStyle"
+                app:cornerRadius="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginStart="10dp"
+                android:text="@string/galeri"
+                app:layout_constraintBottom_toTopOf="@+id/btnLanjut" />
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGaleri"
-            style="?attr/materialButtonOutlinedStyle"
-            app:cornerRadius="50dp"
+            android:id="@+id/btnLanjut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginStart="10dp"
-            android:text="@string/galeri"
-            app:layout_constraintBottom_toTopOf="@+id/btnLanjut" />
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/lanjut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLanjut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_corner"
-        android:text="@string/lanjut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

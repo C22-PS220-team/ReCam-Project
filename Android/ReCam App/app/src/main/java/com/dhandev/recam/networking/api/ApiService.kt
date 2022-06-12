@@ -16,7 +16,7 @@ interface ApiService {
         @Path("bahan") bahan: String
     ): Call<ArrayList<ResponsePaperItem>>
 
-    @GET("everything?q=\"climate change\"")
+    @GET("everything?q=(lingkungan AND sampah)")
     @Headers("Authorization: 8ee90041124949c6af6e5df48e3e5f23")
     fun getArticle(
     ): Call<ResponseArticle>

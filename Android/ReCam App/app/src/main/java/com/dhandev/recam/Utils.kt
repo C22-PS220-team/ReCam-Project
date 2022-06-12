@@ -10,11 +10,14 @@ import android.graphics.Matrix
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.widget.ImageView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.graphics.drawable.toBitmap
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.Target
 import java.io.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -120,4 +123,12 @@ fun customTab(context: Context, dataUrl: String){
     builder.setShowTitle(true)
     val customTabsIntent: CustomTabsIntent = builder.build()
     context.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(dataUrl)) }
+}
+
+fun loadImage (context: Context, url : String?, imageView: ImageView){
+    Glide.with(context)
+        .load(url)
+        .placeholder(R.drawable.ic_baseline_image_24)
+        .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+        .into(imageView)
 }

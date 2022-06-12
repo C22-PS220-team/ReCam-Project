@@ -20,6 +20,7 @@ import com.dhandev.recam.networking.data.response.ArticlesItem
 import com.dhandev.recam.networking.data.response.ResponsePaperItem
 import com.dhandev.recam.ui.article.ArticleActivity
 import com.dhandev.recam.ui.result.DetailActivity
+import com.dhandev.recam.ui.result.ResultActivity
 import com.dhandev.recam.ui.result.ResultViewModel
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
@@ -93,7 +94,18 @@ class HomeFragment : Fragment() {
         binding.seeAll.setOnClickListener {
             startActivity(Intent(requireContext(), ArticleActivity::class.java))
         }
-
+        binding.apply {
+            paper.setOnClickListener {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                intent.putExtra("result", "kertas")
+                startActivity(intent)
+            }
+            plastik.setOnClickListener {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                intent.putExtra("result", "plastic")
+                startActivity(intent)
+            }
+        }
         return root
     }
 

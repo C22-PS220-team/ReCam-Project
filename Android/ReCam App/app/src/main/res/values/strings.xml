@@ -49,4 +49,7 @@
     <string name="Cancel">Cancel</string>
     <string name="desc_logout">%1$s, Are you sure to logout?</string>
     <string name="ideas_from">Craft ideas from %1$s</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="tools_materials">Tools and Materials</string>
+    <string name="procedures">Procedures</string>
 </resources>
