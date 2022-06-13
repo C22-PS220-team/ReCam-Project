@@ -1,0 +1,5 @@
+Collect the data from Kaggle, Google Image, and capture the garbage images manually.
+Equalizing the images by using Photoshop.
+Search a transfer learning model and decide to use ResNet50V5.
+Fine tune the model.
+Save it with TensorFlow lite extensions.
