@@ -15,7 +15,7 @@
     <string name="kategori">Kategori</string>
     <string name="plastik">Plastik</string>
     <string name="logam">Logam</string>
-    <string name="kayu">Kayu</string>
+    <string name="glass">Kaca</string>
     <string name="artikel">Artikel</string>
     <string name="lebih_banyak">Lebih banyak</string>
     <string name="txt_login">Masuk</string>
@@ -31,10 +31,10 @@
     <string name="register">Daftar</string>
     <string name="ask_register">Belum punya akun?</string>
     <string name="hi_welcome_to">Hi, Selamat Datang di</string>
-    <string name="sign_in">Masuk</string>
+    <string name="sign_in">Kaca</string>
     <string name="password">Kata Sandi</string>
     <string name="hello_blank_fragment">Pilih Gambar</string>
-    <string name="queryHint">Kreasi dari botol plastik</string>
+    <string name="queryHint">Plastik, Kaca, more...</string>
     <string name="or_login_with">ATAU</string>
     <string name="register_hint">Silahkan lengkapi data berikut untuk mendaftar.</string>
     <string name="login_hint">Untuk mulai menggunakan ReCam, silahkan login terlebih dahulu.</string>
@@ -46,4 +46,6 @@
     <string name="choose_image">Pilih Gambar</string>
     <string name="tools_materials">Alat dan Bahan</string>
     <string name="procedures">Tata Cara Pembuatan</string>
+    <string name="coming_soon">Segera Hadir</string>
+    <string name="not_detected">Maaf, saya belum cukup pintar</string>
 </resources>

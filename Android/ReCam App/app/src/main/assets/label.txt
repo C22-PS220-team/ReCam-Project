@@ -1,6 +1,6 @@
 kaca
-kardus
+cardboard
 kertas
-logam
+besi
 plastik
 trash

@@ -15,7 +15,7 @@
     <string name="kategori">Category</string>
     <string name="plastik">Plastic</string>
     <string name="logam">Metal</string>
-    <string name="kayu">Wood</string>
+    <string name="glass">Glass</string>
     <string name="artikel">Article</string>
     <string name="lebih_banyak">More</string>
     <string name="txt_login">Login</string>
@@ -26,7 +26,7 @@
     <string name="version">Version</string>
     <string name="cardboard">Cardboard</string>
     <string name="paper">Paper</string>
-    <string name="queryHint">Creation from plastic bottle</string>
+    <string name="queryHint">Plastik, Kaca, more..</string>
     <string name="email" translatable="false">Email</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
@@ -52,4 +52,6 @@
     <string name="choose_image">Choose Image</string>
     <string name="tools_materials">Tools and Materials</string>
     <string name="procedures">Procedures</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="not_detected">Sorry, I\'m not smart enough yet</string>
 </resources>

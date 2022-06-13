@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -95,18 +96,65 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), ArticleActivity::class.java))
         }
         binding.apply {
+            search.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    if (query != null) {
+                        openResult(query)
+                    } else {
+                        Toast.makeText(requireContext(), R.string.not_detected, Toast.LENGTH_SHORT).show()
+                    }
+
+                    return false
+                }
+
+                override fun onQueryTextChange(query: String?): Boolean {
+                    return false;
+                }
+            })
+
+            //featured
+            featured1.setOnClickListener { Toast.makeText(requireContext(), getString(R.string.coming_soon), Toast.LENGTH_SHORT).show() }
+            featured2.setOnClickListener { Toast.makeText(requireContext(), getString(R.string.coming_soon), Toast.LENGTH_SHORT).show() }
+            featured3.setOnClickListener { Toast.makeText(requireContext(), getString(R.string.coming_soon), Toast.LENGTH_SHORT).show() }
+
+            val modelLabel = "label.txt"
+            val inputString = activity?.application?.assets?.open(modelLabel)?.bufferedReader().use { it?.readText() }
+            var listBahan = listOf("kaca", "cardboard", "kertas", "besi", "plastik", "trash")
+
+            //categories
+            kaca.setOnClickListener {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                intent.putExtra("result", listBahan.get(0))
+                startActivity(intent)
+            }
+            cardboard.setOnClickListener {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                intent.putExtra("result", listBahan.get(1))
+                startActivity(intent)
+            }
             paper.setOnClickListener {
                 val intent = Intent(requireContext(), ResultActivity::class.java)
-                intent.putExtra("result", "kertas")
+                intent.putExtra("result", listBahan.get(2))
+                startActivity(intent)
+            }
+            logam.setOnClickListener {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                intent.putExtra("result", listBahan.get(3))
                 startActivity(intent)
             }
             plastik.setOnClickListener {
                 val intent = Intent(requireContext(), ResultActivity::class.java)
-                intent.putExtra("result", "plastic")
+                intent.putExtra("result", listBahan.get(4))
                 startActivity(intent)
             }
         }
         return root
+    }
+
+    private fun openResult(query: String) {
+        val intent = Intent(requireContext(), ResultActivity::class.java)
+        intent.putExtra("result", query)
+        startActivity(intent)
     }
 
     override fun onDestroyView() {
