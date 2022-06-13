@@ -35,11 +35,11 @@ Base URL = https://apikunodejs.herokuapp.com
  
 #### Get items
 Endpoint {item} : 
-- plastik%0D
-- cardboard%0D
-- metal%0D
-- kertas%0D
-- kaca%0D
+- plastik
+- cardboard
+- metal
+- kertas
+- kaca
 
 ```http
   GET /{item}
@@ -61,6 +61,7 @@ Endpoint {item} :
 |`header2`|`string`|Header for procedure|
 |`isih1`|`string`|Bullet list of procedure|
 
+<a href='https://play.google.com/store/apps/details?id=com.dhandev.recam'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='200' height='75' /></a>
 
 ## Authors
 
@@ -68,5 +69,5 @@ Endpoint {item} :
 - [@Muhammad Ramdhan](https://github.com/Dhanfinix)
 - [@Sindhi Vinata](https://github.com/SindhiVinata)
 - [@Ridha Nafila](https://github.com/ridhanafila)
-- [@Ruth Pandanggo](https://github.com/rozinnaufal)
-- [@Achsan](https://github.com/rozinnaufal)
+- [@Ruth Pandanggo](https://github.com/Ruthap27)
+- [@Achsan](https://github.com/achsanymous)
