@@ -83,9 +83,10 @@ class ResultFragment : Fragment() {
         val bahan = result?.trim()
         when(bahan){
             "kertas" -> loadImage(requireContext(),"https://docs.google.com/uc?id=19G0wAV3F2DVmu70y5GIbDxa9jomX49bu", binding.bahan)
-            "kardus" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1eZhC0QeQUsJ74zy9ZV7EsOy6c8CywPcG", binding.bahan)
-            "logam" -> loadImage(requireContext(), "https://docs.google.com/uc?id=1nqbgFxaSNfSSV4AhBNo5dRww6_CJWKgX", binding.bahan)
+            "cardboard" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1eZhC0QeQUsJ74zy9ZV7EsOy6c8CywPcG", binding.bahan)
+            "besi" -> loadImage(requireContext(), "https://docs.google.com/uc?id=1nqbgFxaSNfSSV4AhBNo5dRww6_CJWKgX", binding.bahan)
             "plastik" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1qk-uygHDm3f-75VYhvoEWfUZc_5Woaul", binding.bahan)
+            "kaca" -> loadImage(requireContext(),"https://docs.google.com/uc?id=1edvkpJMolx6_irrE2_RycYA3R8pkDmc3", binding.bahan)
         }
 
         return root

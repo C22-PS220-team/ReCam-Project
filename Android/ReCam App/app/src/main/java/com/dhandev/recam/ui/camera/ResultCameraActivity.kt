@@ -140,7 +140,9 @@ class ResultCameraActivity : AppCompatActivity() {
     private fun classifyImage(image: Bitmap?) {
         val modelLabel = "label.txt"
         val inputString = application.assets.open(modelLabel).bufferedReader().use { it.readText() }
-        var listBahan = inputString.split("\n")
+        //use it when there is lot of bahan
+//        var listBahan = inputString.split("\n")
+        var listBahan = listOf("kaca", "cardboard", "kertas", "besi", "plastik", "trash")
 
         val model = Model3.newInstance(this)
 
@@ -179,10 +181,14 @@ class ResultCameraActivity : AppCompatActivity() {
         val editor : SharedPreferences.Editor = sharepref.edit()
         editor.putString("RESULT_DETECT", listBahan[maxPos])
         editor.apply()
-        val intent = Intent(this@ResultCameraActivity,ResultActivity::class.java)
-        intent.putExtra("result", listBahan[maxPos])
-        startActivity(intent)
 
+        if(listBahan[maxPos] == listBahan[5]){
+            Toast.makeText(this, getString(R.string.not_detected), Toast.LENGTH_SHORT).show()
+        } else {
+            val intent = Intent(this@ResultCameraActivity,ResultActivity::class.java)
+            intent.putExtra("result", listBahan[maxPos])
+            startActivity(intent)
+        }
         model.close()
     }
 

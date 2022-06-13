@@ -41,17 +41,17 @@
         android:layout_marginHorizontal="20dp"
         android:paddingVertical="20dp"/>
 
-    <TextView
-        android:id="@+id/tentang"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:text="@string/tentang"
-        android:textColor="?android:attr/textColorPrimary"
-        style="@style/switchBtn"
-        android:backgroundTint="?attr/colorSurface"
-        android:paddingHorizontal="10dp"
-        android:drawableTint="?android:attr/textColorPrimary"
-        android:layout_marginHorizontal="20dp"
-        android:paddingVertical="20dp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tentang"-->
+<!--        android:drawableLeft="@drawable/ic_baseline_info_24"-->
+<!--        android:text="@string/tentang"-->
+<!--        android:textColor="?android:attr/textColorPrimary"-->
+<!--        style="@style/switchBtn"-->
+<!--        android:backgroundTint="?attr/colorSurface"-->
+<!--        android:paddingHorizontal="10dp"-->
+<!--        android:drawableTint="?android:attr/textColorPrimary"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:paddingVertical="20dp"/>-->
 
     <TextView
         android:id="@+id/keluar"

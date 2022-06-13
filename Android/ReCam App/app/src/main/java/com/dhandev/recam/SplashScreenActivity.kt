@@ -55,7 +55,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
     private fun version(){
         val versi = getString(R.string.version)
-        binding.version.text ="$versi ${BuildConfig.VERSION_NAME}"
+        binding.version.text = BuildConfig.VERSION_NAME
     }
     private fun animation(){
         val animation : ObjectAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0, 100)
