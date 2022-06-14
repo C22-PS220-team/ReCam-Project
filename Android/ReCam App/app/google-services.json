@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "687029028978-cldi29542s4mlpnk2tv8mh996d8d1ff7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhandev.recam",
+            "certificate_hash": "9a3c0733f6a14bd34b533ce1630da6026a60e867"
+          }
+        },
+        {
           "client_id": "687029028978-jsroncigtdlqscdi4j5l0nl2sulhc9ko.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
